@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--meta charset="UTF-8"-->
+    <title>Testseite</title>
+</head>
+<body>
+<h1>Meine erste Java-Web-Anwendung</h1>
+Hallo <span th:text="${viewName}"/> aus <span th:text="${hometown}"/>.
+<br/><br/>
+<h1>Unsere Personen</h1>
+<table>
+    <tr>
+        <th>Vorname</th>
+        <th>Nachname</th>
+    </tr>
+    <tr th:each="person:${personList}">
+        <td th:text="${person.firstName}"/>
+        <td th:text="${person.lastName}"/>
+    </tr>
+</table>
+
+</body>
+</html>
